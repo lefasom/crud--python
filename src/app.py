@@ -34,10 +34,10 @@ def Galery():
 
 
 app.register_blueprint(rutas, url_prefix="/rutas")
-if __name__ == "__main__":
-    app.run(debug=True)
-else:
-    # En producción, utiliza un servidor WSGI como Gunicorn o uWSGI
-    # Ejemplo para Gunicorn: gunicorn -w 4 -b 0.0.0.0:5000 tu_modulo:app
-    # Ejemplo para uWSGI: uwsgi --http :5000 --module tu_modulo:app
-    pass
+# if __name__ == "__main__":
+#     app.run(debug=True)
+# else:
+#     # En producción, utiliza un servidor WSGI como Gunicorn o uWSGI
+#     # Ejemplo para Gunicorn: gunicorn -w 4 -b 0.0.0.0:5000 tu_modulo:app
+#     # Ejemplo para uWSGI: uwsgi --http :5000 --module tu_modulo:app
+#     pass

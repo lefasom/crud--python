@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Videos</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/galery">Galery</a>
+    </nav>
+
+    <h1>HOME</h1>
+    <form action="rutas" method="post" enctype="application/x-www-form-urlencoded">
+      <label for="titulo">Titulo:</label>
+      <input type="text" id="titulo" name="titulo" required /><br />
+
+      <label for="descripcion">Descripcion:</label>
+      <input type="text" id="descripcion" name="descripcion" /><br />
+
+      <input type="submit" value="Enviar" />
+    </form>
+    {% for lista in listas %}
+      <p>{{ lista.title }} - {{ lista.description }}</p>
+      <form action="{{ url_for('rutas.delete_lista', id = lista._id) }}" method="POST" style="display:inline;">
+        <input type="hidden" name="_method" value="DELETE" />
+        <input type="submit" value="Eliminar" />
+      </form>
+    {% endfor %}
+  </body>
+</html>

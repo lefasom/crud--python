@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/galery.css') }}">
+    <title>Acerca de Nosotros</title>
+  
+<body>
+    </head>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/galery">Galery</a>
+    </nav>
+    <h1>{{ mensaje }}</h1>
+    <h2>Brotherhood</h2>
+    <ul>
+
+        {% for video in videos %}
+        <li class="pantalla">
+            <p>___ {{ loop.index }} ___</p>
+            <video controls>
+                <source src="{{ url_for('static', filename='video/' + video) }}" type="video/mp4">
+            </video>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

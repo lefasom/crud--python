@@ -23,14 +23,14 @@ def Home():
 
 @app.route("/galery")
 def Galery():
-    ruta_carpeta = "src/static/video"
-    archivos = os.listdir(ruta_carpeta)
-    videos = [
-        archivo for archivo in archivos if archivo.endswith((".mp4", ".avi", ".mkv"))
-    ]
-    print("videos", videos)
+    # ruta_carpeta = "src/static/video"
+    # archivos = os.listdir(ruta_carpeta)
+    # videos = [
+    #     archivo for archivo in archivos if archivo.endswith((".mp4", ".avi", ".mkv"))
+    # ]
+    # print("videos", videos)
 
-    return render_template("galery.html", mensaje="Fullmetal Alchemist", videos=videos)
+    return render_template("galery.html", mensaje="Fullmetal Alchemist")
 
 
 app.register_blueprint(rutas, url_prefix="/rutas")

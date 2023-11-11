@@ -13,18 +13,8 @@
         <a href="/">Home</a>
         <a href="/galery">Galery</a>
     </nav>
-    <h1>{{ mensaje }}</h1>
     <h2>Brotherhood</h2>
     <ul>
-
-        {% comment %} {% for video in videos %}
-        <li class="pantalla">
-            <p>___ {{ loop.index }} ___</p>
-            <video controls>
-                <source src="{{ url_for('static', filename='video/' + video) }}" type="video/mp4">
-            </video>
-        </li>
-        {% endfor %} {% endcomment %}
     </ul>
 </body>
 

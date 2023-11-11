@@ -30,7 +30,7 @@ def Galery():
     # ]
     # print("videos", videos)
 
-    return render_template("galery.html", mensaje="Fullmetal Alchemist")
+    return render_template("galery.html")
 
 
 app.register_blueprint(rutas, url_prefix="/rutas")
